@@ -1,8 +1,5 @@
-const Todolist =()=>{
-    return(
-        <>
-        Hello Đi</>
-    )
-}
+const Todolist = () => {
+  return <>Hello Đi</>;
+};
 
-export default Todolist
+export default Todolist;

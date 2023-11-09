@@ -49,7 +49,7 @@ function CreateModal(props: IProps) {
         if (res) {
           toast.success("Create new blogs succeed");
           handleCloseModal();
-          mutate("http://localhost:8000/blogs");  // gọi lại data để show ra mà không cân reload
+          mutate("http://localhost:8000/blogs"); // gọi lại data để show ra mà không cân reload
         }
       });
     // toast.success("Create succeed!...");
