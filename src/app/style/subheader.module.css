@@ -1,0 +1,39 @@
+.container{
+    max-width: initial;
+}
+
+section.header {
+  padding-top: 50px;
+  text-align: center;
+  background-color: #f7fafc;
+  margin-bottom: 128px;
+}
+
+.subtitle {
+  color: #03a9f4;
+  font-size: 48px;
+  font-weight: 700;
+}
+.title {
+  color: #1a202c;
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.tagline {
+  color: #718094;
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 49px;
+}
+
+.btn {
+  border-radius: 7px;
+  background: #03a9f4;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 123px;
+  display: inline-flex;
+  padding: 25px 57px 25px 60px;
+}

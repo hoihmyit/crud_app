@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+    font-family: Roboto;
+}
+a {
+  color: #333;
+  text-decoration-line: none;
+}
+.container {
+  position: relative;
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+  max-width: 608px;
+  margin: 0 auto;
+  margin-top: 32px;
+}
+.wrap-menu {
+  display: flex;
+  font-family: Montserrat, sans-serif;
+  font-weight: 600;
+  border-bottom: 1px solid #bdbdbd;
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+
+.container .todo {
+  color: #333;
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: -1.62px;
+  margin-bottom: 58px;
+}
