@@ -1,7 +1,7 @@
 import styles from "./style/style.module.css";
 import type { Metadata } from "next";
 import Image from "next/image";
-import Subheader from "../app/subheader"
+import Subheader from "../app/subheader";
 
 export const metadata: Metadata = {
   title: "Home Page",
