@@ -36,7 +36,7 @@ function CreateModal(props: IProps) {
       return;
     }
 
-    fetch("http://localhost:8000/blogs", {
+    fetch("https://652c0736d0d1df5273ef0e4e.mockapi.io/api/v1/blogs", {
       method: "POST",
       headers: {
         Accept: "application/json, text/plain, */*",
@@ -49,7 +49,7 @@ function CreateModal(props: IProps) {
         if (res) {
           toast.success("Create new blogs succeed");
           handleCloseModal();
-          mutate("http://localhost:8000/blogs"); // gọi lại data để show ra mà không cân reload
+          mutate("https://652c0736d0d1df5273ef0e4e.mockapi.io/api/v1/blogs"); // gọi lại data để show ra mà không cân reload
         }
       });
     // toast.success("Create succeed!...");

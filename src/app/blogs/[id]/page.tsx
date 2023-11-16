@@ -1,16 +1,14 @@
 "use client";
 
 import Card from "react-bootstrap/Card";
-import Button from "react-bootstrap/Button";
 import Link from "next/link";
-// import useSWR from "swr";
 import useSWR, { Fetcher } from "swr";
 const ViewDetailBlog = ({ params }: { params: { id: string } }) => {
   const fetcher: Fetcher<IBlog, string> = (url: string) =>
     fetch(url).then((res) => res.json()); //gợi ý cái blog cho mình
 
-  const { data, error, isLoading } = useSWR(
-    `http://localhost:8000/blogs/${params.id}`,
+  const { data, isLoading } = useSWR(
+    `https://652c0736d0d1df5273ef0e4e.mockapi.io/api/v1/blogs/${params.id}`,
     fetcher,
     {
       revalidateIfStale: false,

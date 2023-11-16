@@ -1,6 +1,6 @@
-const Todolist = () => {
+const homepage = () => {
   return <>Hello Đi</>;
   
 };
 
-export default Todolist;
+export default homepage;

@@ -5,7 +5,7 @@ const blogs = () => {
   const fetcher = (url: string) => fetch(url).then((res) => res.json());
 
   const { data, error, isLoading } = useSWR(
-    "http://localhost:8000/blogs",
+    "https://652c0736d0d1df5273ef0e4e.mockapi.io/api/v1/blogs",
     fetcher,
     {
       revalidateIfStale: false,

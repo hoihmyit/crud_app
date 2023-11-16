@@ -22,9 +22,9 @@ const BasicExample = (props: IProps) => {
   const [showModalCreate, setShowModalCreate] = useState<boolean>(false);
   const [showModalUpdate, setShowModalUpdate] = useState<boolean>(false);
 
-  const handlDeleteBlog = (id: number) => {
+  const deleteBlogById = (id: number) => {
     if (confirm(`Do you want to delete this blog (id =${id})`)) {
-      fetch(`http://localhost:8000/blogs/${id}`, {
+      fetch(`https://652c0736d0d1df5273ef0e4e.mockapi.io/api/v1/blogs/${id}`, {
         method: "DELETE",
         headers: {
           Accept: "application/json, text/plain, */*",
@@ -35,7 +35,7 @@ const BasicExample = (props: IProps) => {
         .then((res) => {
           if (res) {
             toast.success("Delete blog succeed!");
-            mutate("http://localhost:8000/blogs");
+            mutate("https://652c0736d0d1df5273ef0e4e.mockapi.io/api/v1/blogs");
           }
         });
     }
@@ -85,7 +85,7 @@ const BasicExample = (props: IProps) => {
                   </Button>
                   <Button
                     variant="danger"
-                    onClick={() => handlDeleteBlog(item.id)}
+                    onClick={() => deleteBlogById(item.id)}
                   >
                     Delete
                   </Button>
