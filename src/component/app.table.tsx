@@ -69,13 +69,16 @@ const BasicExample = (props: IProps) => {
                 <td>{item.title}</td>
                 <td>{item.author}</td>
                 <td>
-                  <Link className="btn btn-primary" href={`/blogs/${item.id}`}>
+                  <Link
+                    className="btn btn-primary mx-3 mt-1 mb-1"
+                    href={`/blogs/${item.id}`}
+                  >
                     View
                   </Link>
 
                   <Button
                     variant="warning"
-                    className="mx-3"
+                    className="mx-3 mt-1 mb-1"
                     onClick={() => {
                       setBlog(item);
                       setShowModalUpdate(true);
@@ -84,6 +87,7 @@ const BasicExample = (props: IProps) => {
                     Edit
                   </Button>
                   <Button
+                    className="mx-3 mt-1 mb-1"
                     variant="danger"
                     onClick={() => deleteBlogById(item.id)}
                   >

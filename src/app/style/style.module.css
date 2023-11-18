@@ -67,14 +67,12 @@ section.body {
 }
 
 .Interaction {
-  width: 1166px;
   border-radius: 10px;
   background: #e6f6fe;
   font-size: 24px;
   font-weight: 500;
-  gap: 263px;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   margin-bottom: 100px;
 }
@@ -98,4 +96,25 @@ section.body {
   border-radius: 10px;
   background: #03a9f4;
   color: #fff;
+}
+
+@media (max-width: 480px) {
+  .interaction_btn {
+    padding: 7px 10px;
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .Interaction {
+    padding: 0px 20px;
+  }
+  .view {
+    display: block;
+  }
+  .group {
+    margin-bottom: 40px;
+  }
+  .interaction_content {
+    font-size: 20px;
+  }
 }
