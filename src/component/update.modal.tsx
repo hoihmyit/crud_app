@@ -30,16 +30,16 @@ function UpdateModal(props: IProps) {
     }
   }, [blog]);
   const handleSubmit = () => {
-    if (!content && !content && !author) {
-      toast.error("Not empty data !");
-      return;
-    }
     if (!title) {
       toast.error("Not empty title !");
       return;
     }
     if (!author) {
       toast.error("Not empty author !");
+      return;
+    }
+    if (!content && !content && !author) {
+      toast.error("Not empty data !");
       return;
     }
 
@@ -64,8 +64,6 @@ function UpdateModal(props: IProps) {
           mutate("https://652c0736d0d1df5273ef0e4e.mockapi.io/api/v1/blogs"); // gọi lại data để show ra mà không cân reload
         }
       });
-    // toast.success("Create succeed!...");
-    // console.log("check data form", title, author, content);
   };
 
   const handleCloseModal = () => {
@@ -91,26 +89,25 @@ function UpdateModal(props: IProps) {
         <Modal.Body>
           <Form>
             <Form.Group className="mb-3">
-              <Form.Label>Title</Form.Label>
+              <Form.Label>Enter the title</Form.Label>
               <Form.Control
                 type="text"
-                placeholder="....."
+                placeholder="Enter the title"
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
               />
             </Form.Group>
             <Form.Group className="mb-3">
-              <Form.Label>Author</Form.Label>
+              <Form.Label>Enter the Author</Form.Label>
               <Form.Control
                 type="text"
-                placeholder="....."
                 value={author}
                 onChange={(e) => setAuthor(e.target.value)}
               />
             </Form.Group>
 
             <Form.Group className="mb-3">
-              <Form.Label>Content</Form.Label>
+              <Form.Label>Enter the content</Form.Label>
               <Form.Control
                 as="textarea"
                 rows={3}

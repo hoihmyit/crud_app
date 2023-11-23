@@ -18,16 +18,17 @@ function CreateModal(props: IProps) {
   const [content, setContent] = useState<string>("");
 
   const handleSubmit = () => {
-    if (!content && !content && !author) {
-      toast.error("Not empty data !");
-      return;
-    }
     if (!title) {
       toast.error("Not empty title !");
       return;
     }
     if (!author) {
       toast.error("Not empty author !");
+      return;
+    }
+
+    if (!content && !content && !author) {
+      toast.error("Not empty data !");
       return;
     }
 
@@ -52,8 +53,6 @@ function CreateModal(props: IProps) {
           mutate("https://652c0736d0d1df5273ef0e4e.mockapi.io/api/v1/blogs"); // gọi lại data để show ra mà không cân reload
         }
       });
-    // toast.success("Create succeed!...");
-    // console.log("check data form", title, author, content);
   };
 
   const handleCloseModal = () => {
@@ -73,12 +72,12 @@ function CreateModal(props: IProps) {
         size="lg" // modal dài ra
       >
         <Modal.Header closeButton>
-          <Modal.Title>Add new</Modal.Title>
+          <Modal.Title>Add Blog</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <Form>
             <Form.Group className="mb-3">
-              <Form.Label>Title</Form.Label>
+              <Form.Label>Enter the title</Form.Label>
               <Form.Control
                 type="text"
                 placeholder="....."
@@ -90,7 +89,7 @@ function CreateModal(props: IProps) {
               <Form.Label>Author</Form.Label>
               <Form.Control
                 type="text"
-                placeholder="....."
+                placeholder="Enter the Author"
                 value={author}
                 onChange={(e) => setAuthor(e.target.value)}
               />
@@ -102,6 +101,7 @@ function CreateModal(props: IProps) {
                 as="textarea"
                 rows={3}
                 value={content}
+                placeholder="Enter the content"
                 onChange={(e) => setContent(e.target.value)}
               />
             </Form.Group>

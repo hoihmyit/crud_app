@@ -1,7 +1,6 @@
 "use client";
 
 import { Inter } from "next/font/google";
-// import './globals.css'
 import "bootstrap/dist/css/bootstrap.min.css";
 import Header from "../component/app.header";
 import Footer from "../component/app.footer";

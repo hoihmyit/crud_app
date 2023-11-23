@@ -24,7 +24,20 @@ const ViewDetailBlog = ({ params }: { params: { id: string } }) => {
   return (
     <div>
       <div className="my-3">
-        <Link href={"/blogs"}> Go back</Link>
+        <Link
+          className="btn-back"
+          href={"/blogs"}
+          style={{
+            padding: "10px",
+            textDecoration: "none",
+            backgroundColor: "#0d6efd",
+            color:"white",
+            borderRadius: "10px"
+          }}
+        >
+          {" "}
+          Go back
+        </Link>
       </div>
       <Card className="text-center">
         <Card.Header>Title: {data?.title}</Card.Header>
@@ -38,3 +51,4 @@ const ViewDetailBlog = ({ params }: { params: { id: string } }) => {
 };
 
 export default ViewDetailBlog;
+
