@@ -89,7 +89,7 @@ function UpdateModal(props: IProps) {
         <Modal.Body>
           <Form>
             <Form.Group className="mb-3">
-              <Form.Label>Enter the title</Form.Label>
+              <Form.Label>Title</Form.Label>
               <Form.Control
                 type="text"
                 placeholder="Enter the title"
@@ -98,18 +98,20 @@ function UpdateModal(props: IProps) {
               />
             </Form.Group>
             <Form.Group className="mb-3">
-              <Form.Label>Enter the Author</Form.Label>
+              <Form.Label>Author</Form.Label>
               <Form.Control
                 type="text"
+                placeholder="Enter the Author"
                 value={author}
                 onChange={(e) => setAuthor(e.target.value)}
               />
             </Form.Group>
 
             <Form.Group className="mb-3">
-              <Form.Label>Enter the content</Form.Label>
+              <Form.Label>Content</Form.Label>
               <Form.Control
                 as="textarea"
+                placeholder="Enter the content"
                 rows={3}
                 value={content}
                 onChange={(e) => setContent(e.target.value)}

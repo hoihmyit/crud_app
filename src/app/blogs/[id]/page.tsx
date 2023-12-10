@@ -31,8 +31,8 @@ const ViewDetailBlog = ({ params }: { params: { id: string } }) => {
             padding: "10px",
             textDecoration: "none",
             backgroundColor: "#0d6efd",
-            color:"white",
-            borderRadius: "10px"
+            color: "white",
+            borderRadius: "10px",
           }}
         >
           {" "}
