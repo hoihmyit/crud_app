@@ -11,9 +11,9 @@ const ViewDetailBlog = ({ params }: { params: { id: string } }) => {
     `https://652c0736d0d1df5273ef0e4e.mockapi.io/api/v1/blogs/${params.id}`,
     fetcher,
     {
-      revalidateIfStale: false,
-      revalidateOnFocus: false,
-      revalidateOnReconnect: false,
+      revalidateIfStale: true,
+      revalidateOnFocus: true,
+      revalidateOnReconnect: true,
     }
   );
 

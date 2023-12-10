@@ -71,11 +71,6 @@ const BasicExample = (props: IProps) => {
                   <Link
                     className="btn btn-primary mx-3 mt-1 mb-1"
                     href={`/blogs/${item.id}`}
-                    onClick={() => {
-                      mutate(
-                        `https://652c0736d0d1df5273ef0e4e.mockapi.io/api/v1/blogs/${item.id}`
-                      );
-                    }}
                   >
                     View
                   </Link>
