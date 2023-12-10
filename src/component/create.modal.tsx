@@ -27,7 +27,7 @@ function CreateModal(props: IProps) {
       return;
     }
 
-    if (!content && !content && !author) {
+    if (!title && !content && !author) {
       toast.error("Not empty data !");
       return;
     }
@@ -50,7 +50,7 @@ function CreateModal(props: IProps) {
         if (res) {
           toast.success("Create new blogs succeed");
           handleCloseModal();
-          mutate("https://652c0736d0d1df5273ef0e4e.mockapi.io/api/v1/blogs"); // gọi lại data để show ra mà không cân reload
+          mutate("https://652c0736d0d1df5273ef0e4e.mockapi.io/api/v1/blogs"); //Call back data to display without reloading
         }
       });
   };
@@ -77,10 +77,10 @@ function CreateModal(props: IProps) {
         <Modal.Body>
           <Form>
             <Form.Group className="mb-3">
-              <Form.Label>Enter the title</Form.Label>
+              <Form.Label>Title</Form.Label>
               <Form.Control
                 type="text"
-                placeholder="....."
+                placeholder="Enter the title"
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
               />

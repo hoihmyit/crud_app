@@ -38,7 +38,7 @@ function UpdateModal(props: IProps) {
       toast.error("Not empty author !");
       return;
     }
-    if (!content && !content && !author) {
+    if (!title && !content && !author) {
       toast.error("Not empty data !");
       return;
     }
@@ -61,7 +61,7 @@ function UpdateModal(props: IProps) {
         if (res) {
           toast.success("Update succeed");
           handleCloseModal();
-          mutate("https://652c0736d0d1df5273ef0e4e.mockapi.io/api/v1/blogs"); // gọi lại data để show ra mà không cân reload
+          mutate("https://652c0736d0d1df5273ef0e4e.mockapi.io/api/v1/blogs"); // Call back data to display without reloading
         }
       });
   };
@@ -70,7 +70,7 @@ function UpdateModal(props: IProps) {
     setAuthor("");
     setContent("");
     setTitle("");
-    setBlog(null); //khi mình nhấn edit nhiều nó sẽ không trống dữ liệu
+    setBlog(null); //When I press edit a lot, the data will not be empty
     setShowModalUpdate(false);
   };
 
