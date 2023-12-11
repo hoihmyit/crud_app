@@ -1,0 +1,120 @@
+section.header {
+  padding-top: 50px;
+  text-align: center;
+  background-color: #f7fafc;
+  margin-bottom: 128px;
+}
+
+.subtitle {
+  color: #03a9f4;
+  font-size: 48px;
+  font-weight: 700;
+}
+.title {
+  color: #1a202c;
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.tagline {
+  color: #718094;
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 49px;
+}
+
+.btn {
+  border-radius: 7px;
+  background: #03a9f4;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 123px;
+  display: inline-flex;
+  padding: 25px 57px 25px 60px;
+}
+section.body {
+  text-align: center;
+}
+
+.view {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 121px;
+  margin-bottom: 136px;
+}
+
+.group {
+  font-size: 20px;
+  max-width: 467px;
+}
+
+.leftImage {
+  order: -1; /* Sẽ hiển thị đầu tiên */
+}
+
+.namedetail {
+  color: #000;
+  margin-bottom: 30px;
+  font-weight: 500;
+}
+
+.content {
+  color: #718096;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+.Interaction {
+  border-radius: 10px;
+  background: #e6f6fe;
+  font-size: 24px;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.interaction_content {
+  max-width: 634px;
+}
+
+.Interaction_title {
+  color: #000;
+  margin-top: 55px;
+}
+
+.Interaction_start {
+  color: #03a9f4;
+  margin-bottom: 60px;
+}
+
+.interaction_btn {
+  padding: 11px 32px;
+  border-radius: 10px;
+  background: #03a9f4;
+  color: #fff;
+}
+
+@media (max-width: 480px) {
+  .interaction_btn {
+    padding: 7px 10px;
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .Interaction {
+    padding: 0px 20px;
+  }
+  .view {
+    display: block;
+  }
+  .group {
+    margin-bottom: 40px;
+  }
+  .interaction_content {
+    font-size: 20px;
+  }
+}
